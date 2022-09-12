@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>케이팝여자아이돌</title>
+    <title>머신러닝 서비스</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="./mltest_files/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -108,8 +108,8 @@
         async function predict() {
             var dic_class2information = {};
             dic_class2information['나연'] = 'TWICE의 멤버';
-            dic_class2information['장원영'] = 'IVE의 멤버.';
-            dic_class2information['제니'] = 'BLACKPINK의 메인래퍼이자 리드보컬';
+            dic_class2information['리즈'] = 'IVE의 멤버.';
+            dic_class2information['민니'] = '여자아이들 멤버';
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
